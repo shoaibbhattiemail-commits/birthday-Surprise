@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/DELL/Desktop/Birthday%20Surprise%20.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aqsa ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0, #ee9ca7);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    display: none;
+    padding: 45px 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fade 1s;
+}
+
+.page.active {
+    display: flex;
+}
+
+@keyframes fade {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+    font-size: clamp(2.1rem, 7vw, 3.5rem);
+    margin: 20px 0;
+    text-shadow: 2px 3px 10px #d63384;
+}
+
+h2 {
+    font-size: clamp(1.7rem, 5vw, 2.5rem);
+    margin: 15px;
+}
+
+p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 12px auto;
+}
+
+button {
+    border: none;
+    padding: 15px 28px;
+    margin: 15px;
+    border-radius: 35px;
+    background: #ff2678;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #d6338480;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #e6005c;
+}
+
+.heart {
+    font-size: 65px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    50% {transform: scale(1.3);}
+}
+
+.float {
+    position: fixed;
+    bottom: -40px;
+    font-size: 25px;
+    animation: rise 7s linear infinite;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Cake */
+.cake {
+    position: relative;
+    margin: 70px auto 30px;
+    width: 230px;
+}
+
+.layer {
+    height: 65px;
+    border-radius: 12px 12px 20px 20px;
+    border: 3px solid #fff0f5;
+    background: linear-gradient(#ff80ab, #e91e63);
+    position: relative;
+    box-shadow: 0 7px 10px #9d174d55;
+}
+
+.layer.top {
+    width: 170px;
+    margin: auto;
+    height: 55px;
+    background: #ffcadb;
+    color: #d63384;
+    font-size: 19px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.layer.middle {
+    width: 200px;
+    margin: auto;
+}
+
+.layer.bottom {
+    width: 230px;
+}
+
+.candle {
+    position: absolute;
+    width: 13px;
+    height: 55px;
+    background: repeating-linear-gradient(
+        45deg, white, white 5px, #ff2678 5px, #ff2678 10px
+    );
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.flame {
+    position: absolute;
+    width: 19px;
+    height: 27px;
+    background: orange;
+    border-radius: 50% 50% 40% 40%;
+    top: -28px;
+    left: -3px;
+    box-shadow: 0 0 20px yellow;
+    animation: flicker .3s infinite alternate;
+}
+
+@keyframes flicker {
+    to {transform: scale(.8) rotate(8deg);}
+}
+
+.blown .flame {
+    display: none;
+}
+
+.blown .candle {
+    animation: none;
+}
+
+#cakeMessage {
+    display: none;
+    font-size: 23px;
+    margin: 20px;
+}
+
+/* Memories */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+    width: 100%;
+    max-width: 750px;
+    margin: 25px auto;
+}
+
+.memory {
+    background: white;
+    padding: 9px;
+    border-radius: 15px;
+    color: #d63384;
+    box-shadow: 0 5px 20px #0002;
+}
+
+.memory img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.memory p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.upload {
+    margin: 15px;
+    padding: 12px;
+    border-radius: 15px;
+    background: #fff;
+    color: #d63384;
+    max-width: 100%;
+}
+
+.final-message {
+    background: #ffffff25;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border: 1px solid #ffffff70;
+    border-radius: 25px;
+    max-width: 750px;
+    box-shadow: 0 10px 40px #a0005040;
+}
+
+input[type=file] {
+    max-width: 100%;
+}
+
+small {
+    margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background music -->
+<audio id="music" loop="" src="blob:null/0eaf8c01-945a-4401-9e4f-1fd74c62a55b"></audio>
+
+<!-- STEP 1 -->
+<section class="page active" id="page1">
+
+    <div class="heart">💗</div>
+
+    <h2>A Special Surprise For Someone Special 🥹</h2>
+
+    <p>
+        Someone very precious has a birthday today...
+        And I have something beautiful prepared for her.
+        💕
+    </p>
+
+    <button onclick="startSurprise()">
+        🎁 Click Here For Your Surprise
+    </button>
+
+    <label class="upload">
+        🎵 Choose Your Romantic Music
+        <input type="file" accept="audio/*" onchange="loadMusic(event)">
+    </label>
+
+    <small>Made with endless love ❤️</small>
+</section>
+
+
+<!-- STEP 2 -->
+<section class="page" id="page2">
+
+    <div class="heart">❤️</div>
+
+    <h1>Happy Birthday</h1>
+
+    <h1>Aqsa Meri Jaan! 😘💗</h1>
+
+    <p>
+        Happiest Birthday to the most beautiful soul
+        in my world! 🥹
+
+        May your smile always shine brighter than
+        all the stars in the sky. ✨
+
+        You are my happiness, my peace, and my
+        favorite person. 💞
+    </p>
+
+    <h2>🎀 🧸 💋 🌹 🦋 💖</h2>
+
+    <button onclick="nextPage(3)">
+        Next Surprise 🎂
+    </button>
+
+</section>
+
+
+<!-- STEP 3 -->
+<section class="page" id="page3">
+
+    <h1>Make A Wish, My Princess! 👑</h1>
+
+    <h2>Happy 19th Birthday Aqsa ❤️</h2>
+
+    <div class="cake" id="cake">
+
+        <div class="candle">
+            <div class="flame"></div>
+        </div>
+
+        <div class="layer top">Aqsa 19 💗</div>
+        <div class="layer middle"></div>
+        <div class="layer bottom"></div>
+
+    </div>
+
+    <p>
+        Close your eyes, make a beautiful wish
+        and blow your candles, my love! 🥹
+    </p>
+
+    <button onclick="blowCandles()">
+        💨 Blow Your Candles
+    </button>
+
+    <h2 id="cakeMessage" style="display: none;">
+        Yayyy! Happy 19th Birthday Aqsa! 🎉❤️
+    </h2>
+
+    <button onclick="nextPage(4)">
+        Our Beautiful Memories 📸
+    </button>
+
+</section>
+
+
+<!-- STEP 4 -->
+<section class="page" id="page4">
+
+    <h1>Our Beautiful Memories 🥹❤️</h1>
+
+    <p>
+        Every memory with you is a treasure.
+        Every moment is special because it's with you.
+        💕
+    </p>
+
+    <label class="upload">
+        📸 Upload Your Pictures Together
+        <input type="file" id="photos" accept="image/*" multiple="" onchange="showPhotos(event)">
+    </label>
+
+    <div class="memory-grid" id="memoryGrid">
+
+        <!-- Sample memory cards -->
+        <div class="memory">
+            <div style="font-size:75px;">🥰</div>
+            <p>My Favorite Person ❤️</p>
+        </div>
+
+        <div class="memory">
+            <div style="font-size:75px;">🌹</div>
+            <p>My Beautiful Memories 💗</p>
+        </div>
+
+        <div class="memory">
+            <div style="font-size:75px;">🧸</div>
+            <p>Forever My Princess 👑</p>
+        </div>
+
+    <div class="memory"><img src="blob:null/f9e135f6-13a6-4730-ab6b-3c7d6dce15e1"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/a0a4d604-5865-40b6-8889-9344223da8f9"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/631b5ff1-f0b4-4f81-9b7c-2205cc6c7479"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/739aff10-5f26-4962-829c-4aad1661ca1a"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/087f1e3f-e06f-45c3-96a6-473c7a414d2d"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/b4791004-81c1-436c-b30a-f5ca391cfa3d"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/8c528686-0aa3-401f-9de7-0e6fe08b0d98"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/6b63b95b-cb14-475d-b660-d9dfec646b64"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/94eaf6dd-8794-4644-bfa4-2dda53aac7dd"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/f475a593-fc6c-4889-899f-303d3d0b80c7"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/201a4faa-a948-44c8-ae51-d3f97137f591"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/34ff2074-5e6d-4c44-84da-d530246a0819"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/af7a1c5b-fe02-422f-a992-2aa97697fdd0"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/19ca1759-31e1-4b6e-940b-ca7eb6b1e848"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/2334a5dd-4151-4950-8361-8465fba12314"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/03f6ab6e-e2f4-48a7-afb0-dee7b373618d"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/ea359903-5454-4c8d-bdf3-e37fb510f9dd"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/aa4c9aeb-c16f-40bc-b94b-377367ce6c0e"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/5ce93174-fe11-4255-9d1c-653ec83afed4"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/3026dd75-96f3-4a73-878d-e0dc52d2d02a"><p>A beautiful memory ❤️</p></div><div class="memory"><img src="blob:null/afa7521f-49e4-418b-b982-09b3d38dc0c6"><p>A beautiful memory ❤️</p></div></div>
+
+    <p>
+        More than pictures, you are my favorite story. ❤️
+    </p>
+
+    <button onclick="nextPage(5)">
+        One Last Surprise 💌
+    </button>
+
+</section>
+
+
+<!-- STEP 5 -->
+<section class="page" id="page5">
+
+    <div class="final-message">
+
+        <div class="heart">💖</div>
+
+        <h1>To My Love, Aqsa</h1>
+
+        <h2>Happy Birthday, Meri Jaan! 😘</h2>
+
+        <p>
+            My love, today is all about you. ❤️
+
+            I wish I could give you the whole world,
+            because you deserve every beautiful thing
+            in it.
+
+            Thank you for being the sweetest part
+            of my life.
+
+            May Allah bless you with endless happiness,
+            success, good health and everything your
+            beautiful heart desires. 🤲💗
+
+            I hope your every dream comes true.
+
+            No matter how many birthdays pass,
+            I will always wish to see you smiling.
+
+            You are my today, my tomorrow,
+            and my favorite forever. 🥹❤️
+        </p>
+
+        <h1>I LOVE YOU SO MUCH! 💋</h1>
+
+        <h2>Forever Yours ❤️</h2>
+
+        <div style="font-size:45px;">
+            💗 🧸 🌹 💍 🦋 💞
+        </div>
+
+    </div>
+
+    <button onclick="restart()">
+        🔄 Watch Again
+    </button>
+
+</section>
+
+
+<script>
+
+// Page navigation
+function nextPage(number) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    document.getElementById('page' + number)
+    .classList.add('active');
+
+    window.scrollTo(0, 0);
+}
+
+// Start birthday surprise and music
+function startSurprise() {
+
+    const music = document.getElementById('music');
+
+    if (music.src) {
+        music.play().catch(() => {});
+    }
+
+    nextPage(2);
+}
+
+// Upload custom music
+function loadMusic(event) {
+
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    const music = document.getElementById('music');
+
+    music.src = URL.createObjectURL(file);
+    music.play().catch(() => {});
+
+}
+
+// Blow birthday candles
+function blowCandles() {
+
+    document.getElementById('cake')
+    .classList.add('blown');
+
+    document.getElementById('cakeMessage')
+    .style.display = 'block';
+
+    confetti();
+}
+
+// Upload photos
+function showPhotos(event) {
+
+    const files = Array.from(event.target.files);
+    const grid = document.getElementById('memoryGrid');
+
+    files.forEach(file => {
+
+        if (!file.type.startsWith('image/')) return;
+
+        const url = URL.createObjectURL(file);
+
+        const card = document.createElement('div');
+        card.className = 'memory';
+
+        const img = document.createElement('img');
+        img.src = url;
+
+        const caption = document.createElement('p');
+        caption.textContent = 'A beautiful memory ❤️';
+
+        card.appendChild(img);
+        card.appendChild(caption);
+
+        grid.appendChild(card);
+
+    });
+}
+
+// Floating hearts and cute emojis
+const emojis = ['❤️','💗','💕','🌹','🦋','😘','🥹','💖','🧸'];
+
+function createHeart() {
+
+    const heart = document.createElement('div');
+
+    heart.className = 'float';
+    heart.textContent =
+    emojis[Math.floor(Math.random() * emojis.length)];
+
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration =
+    (4 + Math.random() * 5) + 's';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 9000);
+}
+
+setInterval(createHeart, 450);
+
+// Simple confetti
+function confetti() {
+
+    for (let i = 0; i < 70; i++) {
+
+        const piece = document.createElement('div');
+
+        piece.className = 'float';
+        piece.textContent = ['🎉','✨','💗','🎊']
+        [Math.floor(Math.random() * 4)];
+
+        piece.style.left = Math.random() * 100 + 'vw';
+        piece.style.animationDuration =
+        (2 + Math.random() * 3) + 's';
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => piece.remove(), 5000);
+    }
+}
+
+// Restart
+function restart() {
+
+    document.getElementById('cake')
+    .classList.remove('blown');
+
+    document.getElementById('cakeMessage')
+    .style.display = 'none';
+
+    nextPage(1);
+}
+
+</script>
+
+
+
+<div class="float" style="left: 54.8286vw; animation-duration: 7.78964s;">💕</div><div class="float" style="left: 79.5407vw; animation-duration: 8.64977s;">💖</div><div class="float" style="left: 79.4843vw; animation-duration: 7.07695s;">❤️</div><div class="float" style="left: 61.3045vw; animation-duration: 5.63719s;">🥹</div><div class="float" style="left: 8.63089vw; animation-duration: 4.03877s;">💗</div><div class="float" style="left: 92.2805vw; animation-duration: 6.94029s;">😘</div><div class="float" style="left: 95.4493vw; animation-duration: 4.72434s;">🌹</div><div class="float" style="left: 90.8585vw; animation-duration: 8.39724s;">🥹</div><div class="float" style="left: 42.8058vw; animation-duration: 7.70784s;">❤️</div><div class="float" style="left: 9.7851vw; animation-duration: 5.08883s;">😘</div><div class="float" style="left: 50.2667vw; animation-duration: 7.63115s;">💖</div><div class="float" style="left: 57.8866vw; animation-duration: 8.18985s;">💕</div><div class="float" style="left: 78.7965vw; animation-duration: 8.67339s;">🧸</div><div class="float" style="left: 61.8029vw; animation-duration: 6.372s;">❤️</div><div class="float" style="left: 4.7098vw; animation-duration: 4.75757s;">💗</div><div class="float" style="left: 58.7982vw; animation-duration: 7.02248s;">💗</div><div class="float" style="left: 37.0672vw; animation-duration: 6.40028s;">🥹</div><div class="float" style="left: 5.75847vw; animation-duration: 6.03194s;">😘</div><div class="float" style="left: 86.7515vw; animation-duration: 6.00157s;">❤️</div><div class="float" style="left: 54.566vw; animation-duration: 5.44647s;">💕</div></body></html>
